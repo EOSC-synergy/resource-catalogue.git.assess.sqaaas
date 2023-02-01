@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/resource-catalogue:
+      branch: master
+      repo: https://github.com/madgeek-arc/resource-catalogue.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/resource-catalogue git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-aqua-salamander.sh
+        container: qc.acc_scummy-blue-woodpecker
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/resource-catalogue find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-beige-maltese.sh
+        container: qc.doc_woozy-ivory-havanese
+      github.com/madgeek-arc/resource-catalogue git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-linen-wolverine.sh
+        container: qc.doc_sleazy-cerise-quoll
+      github.com/madgeek-arc/resource-catalogue markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-dandelion-starfish.sh
+        container: qc.doc_gamy-grey-wasp
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/resource-catalogue licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-beige-dhole.sh
+        container: qc.lic_beady-sepia-bat
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/resource-catalogue checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-turquoise-caracal.sh
+        container: qc.sty_squirrely-viridian-macaw
+      github.com/madgeek-arc/resource-catalogue hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-cobalt-moorhen.sh
+        container: qc.sty_nippy-denim-collie
+      github.com/madgeek-arc/resource-catalogue jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-red-stingray.sh
+        container: qc.sty_randy-mustard-coyote
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/resource-catalogue get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-mauve-pinscher.sh
+        container: qc.ver_gimpy-goldenrod-whale
+timeout: 5400
