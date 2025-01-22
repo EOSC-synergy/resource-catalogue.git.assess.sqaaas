@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/resource-catalogue git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-magnolia-baboon.sh
-        container: qc.acc_cloudy-heliotrope-rat
+        - /usr/bin/env sh .sqa/script.shaggy-salmon-bordeaux.sh
+        container: qc.acc_queasy-tangerine-retriever
   QC.Doc:
     repos:
       github.com/madgeek-arc/resource-catalogue find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-mauve-crab.sh
-        container: qc.doc_nerdy-alizarin-bulldog
+        - /usr/bin/env sh .sqa/script.leaky-turquoise-turtle.sh
+        container: qc.doc_gamy-buff-russel
       github.com/madgeek-arc/resource-catalogue git:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-lavender-shark.sh
-        container: qc.doc_trippy-chestnut-meerkat
+        - /usr/bin/env sh .sqa/script.hazy-linen-earwig.sh
+        container: qc.doc_blurry-indigo-mandrill
       github.com/madgeek-arc/resource-catalogue markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-ecru-serval.sh
-        container: qc.doc_thirsty-tangerine-snail
+        - /usr/bin/env sh .sqa/script.foggy-ecru-harrier.sh
+        container: qc.doc_flimsy-smalt-dragon
   QC.Lic:
     repos:
       github.com/madgeek-arc/resource-catalogue licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-sangria-dunker.sh
-        container: qc.lic_hilly-puce-kakapo
+        - /usr/bin/env sh .sqa/script.flimsy-magnolia-beaver.sh
+        container: qc.lic_snappy-sepia-dragon
   QC.Sty:
     repos:
       github.com/madgeek-arc/resource-catalogue checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-gamboge-shrimp.sh
-        container: qc.sty_cloudy-eggplant-liger
+        - /usr/bin/env sh .sqa/script.scaly-russet-birman.sh
+        container: qc.sty_sunny-goldenrod-ragdoll
       github.com/madgeek-arc/resource-catalogue hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-chartreuse-dachsbracke.sh
-        container: qc.sty_scanty-indigo-spaniel
+        - /usr/bin/env sh .sqa/script.cozy-indigo-turkey.sh
+        container: qc.sty_sickly-mustard-peccary
       github.com/madgeek-arc/resource-catalogue jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-pear-husky.sh
-        container: qc.sty_stealthy-magnolia-urchin
+        - /usr/bin/env sh .sqa/script.squirrely-amber-snake.sh
+        container: qc.sty_sleepy-black-meerkat
   QC.Ver:
     repos:
       github.com/madgeek-arc/resource-catalogue get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-celadon-duck.sh
-        container: qc.ver_cozy-harlequin-bird
+        - /usr/bin/env sh .sqa/script.sunny-pink-shark.sh
+        container: qc.ver_scanty-tan-forest
 timeout: 5400
